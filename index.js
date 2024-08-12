@@ -15,7 +15,7 @@ venom
 app.use(express.static("."));
 var cron = require("node-cron");
 function start(client) {
-  cron.schedule("* * * * *", async () => {
+  cron.schedule("5 * * * *", async () => {
     const joke_res = await axios.get(
       "https://icanhazdadjoke.com/slack"
     );
